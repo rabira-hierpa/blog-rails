@@ -4,9 +4,7 @@
     <% @articles.each do |article| %>
       <li class="py-10 space-y-10">
         <h1 class="text-2xl font-semibold">
-          <a href="/articles/<%= article.id %>">
-            <%= article.title%>
-          </a>
+          <%= link_to article.title, article %>
         </h1>
       </li>
     <%end%>
