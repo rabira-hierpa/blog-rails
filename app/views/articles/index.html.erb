@@ -1,1 +1,14 @@
-<h1 class="text-7xl text-red-400 font-semibold">Hello Rails!</h1>
+<div class="flex-col space-y-5">
+  <h1 class="text-7xl text-red-400 font-semibold">Articles</h1>
+  <ul>
+    <% @articles.each do |article| %>
+      <li class="py-10 space-y-10">
+        <h1 class="text-2xl font-semibold">
+          <a href="/articles/<%= article.id %>">
+            <%= article.title%>
+          </a>
+        </h1>
+      </li>
+    <%end%>
+  </ul>
+</div>
