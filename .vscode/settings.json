@@ -1,0 +1,8 @@
+{
+  "[ruby]": {
+    "editor.defaultFormatter": "misogi.ruby-rubocop",
+    "editor.formatOnSave": true
+  },
+  "ruby.rubocop.executePath": "/Users/rz/.rvm/gems/ruby-2.7.6/bin/",
+  "ruby.rubocop.useBundler": false
+}
