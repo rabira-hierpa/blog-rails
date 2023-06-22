@@ -1,24 +1,4 @@
 <div class="flex-col space-y-10">
 <h1 class="text-3xl font-semibold py-10">Edit Article</h1>
-<%= form_with model: @article do |form| %>
-  <div>
-    <%= form.label :title %><br>
-    <%= form.text_field :title %>
-    <% @article.errors.full_messages_for(:title).each do |message| %>
-      <div class="text-red-400"><%= message %></div>
-    <% end %>
-  </div>
-
-  <div>
-    <%= form.label :body %><br>
-    <%= form.text_area :body %><br>
-    <% @article.errors.full_messages_for(:body).each do |message| %>
-      <div><%= message %></div>
-    <% end %>
-  </div>
-
-  <button class="rounded-md bg-blue-400 text-white " type="submit" name="commit" value="Create Article">
-  Create Article
-  </button>
-<% end %>
+<%= render "form", article: @article %>
 </div>
