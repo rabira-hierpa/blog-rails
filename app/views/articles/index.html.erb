@@ -2,12 +2,14 @@
   <h1 class="text-7xl text-red-400 font-semibold">Articles</h1>
   <ul>
     <% @articles.each do |article| %>
-      <li class="py-10 space-y-10">
-        <h1 class="text-2xl font-semibold">
-          <%= link_to article.title, article %>
-        </h1>
-      </li>
-    <%end%>
+      <% unless article.archived? %>
+        <li class="py-10 space-y-10">
+          <h1 class="text-2xl font-semibold">
+            <%= link_to article.title, article %>
+          </h1>
+        </li>
+      <%end%>
+    <% end %>
   </ul>
   <%= link_to "New Article", new_article_path %>
 </div>
